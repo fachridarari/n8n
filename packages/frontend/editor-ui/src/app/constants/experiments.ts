@@ -89,12 +89,6 @@ export const SSO_JUST_IN_TIME_PROVSIONING_EXPERIMENT = {
 	variant: 'variant',
 };
 
-export const DRAFT_PUBLISH_EXPERIMENT = {
-	name: '051_draft_publish_workflows',
-	control: 'control',
-	variant: 'variant',
-};
-
 export const EXPERIMENTS_TO_TRACK = [
 	EXTRA_TEMPLATE_LINKS_EXPERIMENT.name,
 	TEMPLATE_ONBOARDING_EXPERIMENT.name,
