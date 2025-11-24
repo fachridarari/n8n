@@ -133,6 +133,13 @@ jobs:
       needs.typecheck.result != 'failure' &&
       needs.lint.result != 'failure'
     uses: ./.github/workflows/playwright-test-reusable.yml
+    with:
+      test-mode: 'docker-pull'
+      docker-image: 'n8nio/n8n:nightly'
+      test-command: 'pnpm --filter=n8n-playwright test:container:queue'
+      runner: 'blacksmith-4vcpu-ubuntu-2204'
+      shards: '[1, 2, 3, 4, 5, 6]'
+      workers: '2'
     secrets: inherit
 
   e2e-checks:
