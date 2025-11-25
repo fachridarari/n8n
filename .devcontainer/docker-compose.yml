@@ -19,6 +19,7 @@ services:
       - ..:/workspaces:cached
     command: sleep infinity
     environment:
+      N8N_COMMUNITY_PACKAGES_ENABLED=true
       DB_POSTGRESDB_HOST: postgres
       DB_TYPE: postgresdb
       DB_POSTGRESDB_PASSWORD: password
